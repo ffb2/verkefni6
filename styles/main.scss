@@ -1,0 +1,57 @@
+/** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
+img {
+  max-width: 100%;
+}
+
+/** Litur á hlekkjum erfist frá foreldri **/
+a {
+  color: inherit;
+}
+
+/** „Til baka á forsíðu“ hlekkur **/
+.back {
+  margin-top: var(--spacing);
+}
+
+/** Haus á síðum **/
+
+header {
+  padding: var(--spacing) calc(var(--spacing) * 1.5);
+  width: 100%;
+  background-color: var(--color-background-secondary);
+  border-bottom: var(--border-with-background);
+  text-align: center;
+}
+
+/** Meginmál og efni forsíðu **/
+
+main {
+  width: 100%;
+}
+
+/**
+   * notum þetta til að fá bil á milli eininga _almennt_
+   * en ekki að hver eining þurfi að huga að bili
+   */
+main > .content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+}
+
+/* Fade in animation */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
+/* Til að transition sé ekki frá hvítum */
+html {
+  background-color: var(--color-background-primary);
+}
